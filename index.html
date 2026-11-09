@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Zahra Redha, Data Analytics Officer</title>
+<meta name="description" content="Zahra Redha, Data Analytics Officer. BSc Data Science and Business Analytics, University of London (LSE). Developed Mazad's data function from the ground up.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;800&family=Sora:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#F6F7F5; --surface:#FFFFFF; --ink:#1B2433; --muted:#4F5B68; --line:#E3E6E2;
+    --teal:#0E5F7A; --teal-ink:#0A4659; --navy:#1F2A4A; --on-dark:#F6F7F5; --on-dark-muted:#B9C3CF;
+    box-sizing:border-box;
+    padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      color-scheme:dark;
+      --bg:#121820; --surface:#18212B; --ink:#EEF1F4; --muted:#A9B4C0; --line:#28323E;
+      --teal:#4FB3D1; --teal-ink:#8ED0E4; --navy:#0D131C; --on-dark:#EEF1F4; --on-dark-muted:#A9B4C0;
+    }
+  }
+  :root[data-theme="dark"]{
+    color-scheme:dark;
+    --bg:#121820; --surface:#18212B; --ink:#EEF1F4; --muted:#A9B4C0; --line:#28323E;
+    --teal:#4FB3D1; --teal-ink:#8ED0E4; --navy:#0D131C; --on-dark:#EEF1F4; --on-dark-muted:#A9B4C0;
+  }
+  *,*::before,*::after{box-sizing:inherit}
+  html{scroll-behavior:smooth; scroll-padding-top:calc(72px + env(safe-area-inset-top,0px))}
+  @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto} .slides{scroll-behavior:auto} }
+  body{margin:0; background:var(--bg); color:var(--ink); font-family:Manrope,"Segoe UI",system-ui,sans-serif; font-size:17px; line-height:1.6; -webkit-font-smoothing:antialiased}
+  img{max-width:100%; display:block}
+  a{color:var(--teal)} a:hover{color:var(--teal-ink)}
+  :focus-visible{outline:3px solid var(--teal); outline-offset:3px; border-radius:4px}
+  h1,h2,h3{font-family:Sora,Manrope,sans-serif; margin:0; letter-spacing:-0.015em; line-height:1.15}
+  p{margin:0}
+  .wrap{max-width:1120px; margin:0 auto; padding:0 24px}
+  @media (min-width:720px){ .wrap{padding:0 40px} }
+
+  .site-header{position:sticky; top:env(safe-area-inset-top,0px); z-index:5; background:color-mix(in srgb, var(--bg) 88%, transparent); backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px); border-bottom:1px solid var(--line)}
+  body::before{content:""; position:fixed; inset:0 0 auto; height:env(safe-area-inset-top,0px); background:var(--bg); z-index:10}
+  .site-header .wrap{display:flex; align-items:center; justify-content:space-between; gap:16px; min-height:64px}
+  .brand{font-family:Sora,sans-serif; font-weight:700; font-size:18px; color:var(--ink); text-decoration:none}
+  .nav{display:flex; gap:4px 22px; flex-wrap:wrap; justify-content:flex-end}
+  .nav a{color:var(--ink); text-decoration:none; font-weight:600; font-size:15px; padding:10px 2px}
+  .nav a:hover{color:var(--teal)}
+  @media (max-width:560px){ .nav a:nth-child(n+4){display:none} }
+
+  .hero{padding:56px 0 72px}
+  .hero .wrap{display:grid; grid-template-columns:1fr; gap:40px; align-items:center}
+  @media (min-width:860px){ .hero .wrap{grid-template-columns:minmax(0,1.15fr) minmax(280px,0.85fr); gap:56px} .hero{padding:80px 0 96px} }
+  .hero h1{font-size:clamp(40px,6vw,64px); font-weight:700}
+  .role{font-weight:600; color:var(--teal); font-size:clamp(16px,1.6vw,19px); margin-top:14px; line-height:1.4}
+  .lede{color:var(--muted); font-size:clamp(16px,1.4vw,18px); max-width:62ch; margin-top:22px}
+  .actions{display:flex; flex-wrap:wrap; gap:12px; margin-top:30px}
+  .btn{display:inline-flex; align-items:center; justify-content:center; min-height:48px; padding:0 22px; border-radius:6px; font-weight:600; font-size:15px; text-decoration:none; border:1.5px solid transparent}
+  .btn-primary{background:var(--teal); color:#fff} .btn-primary:hover{background:var(--teal-ink); color:#fff}
+  .btn-outline{border-color:var(--ink); color:var(--ink)} .btn-outline:hover{background:var(--ink); color:var(--bg)}
+  .portrait{position:relative; max-width:420px; margin:0 auto; width:100%}
+  .portrait img{width:100%; aspect-ratio:4/5; object-fit:cover; border-radius:14px}
+  .portrait::after{content:""; position:absolute; inset:18px -18px -18px 18px; border:1.5px solid var(--teal); border-radius:14px; z-index:-1; opacity:.6}
+  @media (max-width:859px){ .portrait{max-width:320px} .portrait::after{inset:14px -14px -14px 14px} }
+
+  section.block{padding:72px 0}
+  @media (min-width:860px){ section.block{padding:96px 0} }
+  .alt{background:var(--surface); border-top:1px solid var(--line); border-bottom:1px solid var(--line)}
+  .two{display:grid; gap:28px 64px; grid-template-columns:1fr}
+  @media (min-width:860px){ .two{grid-template-columns:minmax(220px,0.8fr) minmax(0,2fr)} }
+  .two h2{font-size:clamp(28px,3vw,34px)}
+  .two .intro{color:var(--muted); margin-top:10px; max-width:36ch}
+
+  .timeline{border-top:1px solid var(--line)}
+  .org{padding:22px 0 6px; font-family:Sora,sans-serif; font-weight:700; font-size:20px}
+  .row{display:grid; gap:4px 32px; grid-template-columns:1fr; padding:18px 0 24px; border-bottom:1px solid var(--line)}
+  @media (min-width:600px){ .row{grid-template-columns:200px 1fr} }
+  .row .when{color:var(--muted); font-size:15px}
+  .row .what{font-weight:800}
+  .row ul{margin:10px 0 0; padding-left:18px} .row li{margin-bottom:8px}
+
+
+  /* timeline */
+  .org{margin:0 0 6px; font-family:Sora,sans-serif; font-weight:700; font-size:20px}
+  .tl{list-style:none; margin:0; padding:0 0 0 28px; position:relative}
+  .tl::before{content:""; position:absolute; left:7px; top:10px; bottom:10px; width:2px; background:var(--line)}
+  .tl-item{position:relative; padding:14px 0 26px}
+  .tl-item::before{content:""; position:absolute; left:-28px; top:21px; width:16px; height:16px; border-radius:50%; background:var(--surface); border:3px solid var(--teal)}
+  .tl-item:first-child::before{background:var(--teal)}
+  .tl-item .when{color:var(--muted); font-size:15px}
+  .tl-item .what{font-weight:800; font-size:18px; margin-top:2px}
+  .tl-item ul{margin:10px 0 0; padding-left:18px} .tl-item li{margin-bottom:8px}
+
+  .grid2{display:grid; gap:28px 40px; grid-template-columns:1fr}
+  @media (min-width:600px){ .grid2{grid-template-columns:repeat(2,minmax(0,1fr))} }
+  .grid2 h3{font-size:17px; font-weight:800; font-family:Manrope,sans-serif; letter-spacing:0; margin-bottom:6px}
+  .grid2 p{color:var(--muted)}
+
+  /* slideshow */
+  .gallery{padding:72px 0}
+  @media (min-width:860px){ .gallery{padding:96px 0} }
+  .gallery h2{font-size:clamp(28px,3vw,34px)}
+  .gallery .intro{color:var(--muted); margin-top:10px; max-width:60ch}
+  .show{position:relative; margin-top:32px}
+  .slides{display:flex; overflow-x:auto; scroll-snap-type:x mandatory; scroll-behavior:smooth; gap:16px; border-radius:14px; scrollbar-width:none; -ms-overflow-style:none}
+  .slides::-webkit-scrollbar{display:none}
+  .slides figure{margin:0; flex:0 0 100%; scroll-snap-align:start}
+  .slides img{width:100%; aspect-ratio:3/2; object-fit:cover; border-radius:14px; background:var(--line)}
+  .ctl{position:absolute; top:50%; transform:translateY(-50%); width:48px; height:48px; border-radius:50%; border:none; background:rgba(27,36,51,.72); color:#fff; display:grid; place-items:center; cursor:pointer}
+  .ctl:hover{background:rgba(27,36,51,.9)}
+  .ctl.prev{left:14px} .ctl.next{right:14px}
+  .ctl svg{width:22px; height:22px}
+  .dots{display:flex; justify-content:center; gap:10px; margin-top:16px}
+  .dots button{width:12px; height:12px; padding:0; border-radius:50%; border:none; background:var(--line); cursor:pointer}
+  .dots button[aria-current="true"]{background:var(--teal)}
+  .dots button{position:relative} .dots button::after{content:""; position:absolute; inset:-14px}
+
+  .contact{background:var(--navy); color:var(--on-dark); padding:80px 0 40px}
+  .contact .wrap{display:grid; gap:28px 64px; grid-template-columns:1fr}
+  @media (min-width:860px){ .contact .wrap{grid-template-columns:1.2fr 1fr; align-items:center} }
+  .contact h2{font-size:clamp(28px,3vw,34px)}
+  .contact p{color:var(--on-dark-muted); margin-top:10px; max-width:46ch}
+  .links{display:flex; flex-direction:column; gap:8px}
+  .links a{color:var(--on-dark); text-decoration:underline; text-underline-offset:4px; padding:8px 0; font-weight:600; font-size:17px; word-break:break-word}
+  .foot{color:var(--on-dark-muted); font-size:14px; margin-top:56px; display:flex; flex-wrap:wrap; justify-content:space-between; gap:8px}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="#top">Zahra Redha</a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#beyond">Beyond work</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <h1>Zahra Redha</h1>
+      <p class="role">Data Analytics Officer | BSc Data Science &amp; Business Analytics | University of London (LSE)</p>
+      <p class="lede">Data analyst with a BSc in Data Science and Business Analytics from the University of London (LSE), who developed Mazad’s data function from the ground up. Experienced in building ETL pipelines in AWS Glue, centralising data in Redshift, writing the SQL behind 10+ Power BI reports, and automating the reporting management relies on. Skilled in turning complex data into clear answers to the business questions leadership asks, and ensuring the numbers behind them are accurate and reliable.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="mailto:z.redha@outlook.com">Email me</a>
+        <a class="btn btn-outline" href="https://www.linkedin.com/in/zahra-redha" rel="me">LinkedIn</a>
+        <a class="btn btn-outline" href="Zahra-Redha-CV.pdf" download>Download CV</a>
+      </div>
+    </div>
+    <div class="portrait">
+      <img src="zahra.jpg" alt="Zahra Redha" width="960" height="1200" fetchpriority="high">
+    </div>
+  </div>
+</section>
+
+<section class="block alt" id="experience">
+  <div class="wrap two">
+    <div>
+      <h2>Work experience</h2>
+      <p class="intro">Three roles at Mazad, from the first intern to work on data to a full-time analyst.</p>
+    </div>
+    <div>
+      <p class="org">Mazad (July 2024 to Present)</p>
+      <ol class="tl">
+        <li class="tl-item">
+          <p class="when">June 2026 to Present</p>
+          <p class="what">Full-Time Data Analyst</p>
+          <ul>
+            <li>Drove a strategic shift in how the company auctions by category. Analysed why a key category was underperforming, presented recommendations to stakeholders, and the restructuring that followed increased sell-through.</li>
+            <li>Built and automated alert reports to track employee performance, improving the efficiency of performance tracking.</li>
+            <li>Entrusted with participating in the recruitment of the data analytics interns.</li>
+            <li>Engaged beyond the data role: selected to represent Mazad at Youth City, presenting to young people on how data helps leaders make better decisions, and active member of the company’s Social Committee.</li>
+          </ul>
+        </li>
+        <li class="tl-item">
+          <p class="when">July 2025 to May 2026</p>
+          <p class="what">Part-Time Data Analyst</p>
+          <ul>
+            <li>Established the company’s data analytics function, introducing Power BI and automating regular reporting on deposits, auctions, growth, employee performance, and engagement through AWS Glue pipelines and a cloud data warehouse.</li>
+            <li>Built and monitored ETL pipelines to ensure clean, consistent and reusable data for reporting and future AI initiatives.</li>
+            <li>Identified database limitations affecting report accuracy and put workarounds in place until a permanent fix was scoped.</li>
+          </ul>
+        </li>
+        <li class="tl-item">
+          <p class="when">July 2024 to September 2024</p>
+          <p class="what">Data Analytics Intern</p>
+          <ul>
+            <li>First to tackle data within the company, gaining a deep understanding of the business processes and existing database limitations.</li>
+            <li>Built Power BI dashboards to monitor platform performance, giving management an analytical view of the company.</li>
+          </ul>
+        </li>
+      </ol>
+
+      <p class="org" style="margin-top:28px">Tamkeen (July 2023 to August 2023)</p>
+      <ol class="tl">
+        <li class="tl-item">
+          <p class="when">July 2023 to August 2023</p>
+          <p class="what">Project Assessment Intern</p>
+          <ul>
+            <li>Performed UAT for software validation and ensured quality across project deliverables.</li>
+            <li>Cleaned and organised data using Excel and worked with cross-functional teams to meet project deadlines.</li>
+          </ul>
+        </li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="skills">
+  <div class="wrap two">
+    <div>
+      <h2>Skills</h2>
+    </div>
+    <div class="grid2">
+      <div><h3>Technical skills</h3><p>Power BI, PostgreSQL, AWS Glue (ETL), Amazon Redshift, Google Analytics, Mixpanel, Microsoft Excel, Power Automate</p></div>
+      <div><h3>Data domains</h3><p>Financial data, user engagement events, employee performance, operational systems and product analytics</p></div>
+      <div><h3>Core competencies</h3><p>ETL pipeline development, dashboard design &amp; reporting, stakeholder communication and data centralisation</p></div>
+      <div><h3>Languages</h3><p>Arabic (Native), English (Fluent)</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="block alt" id="education">
+  <div class="wrap two">
+    <div>
+      <h2>Education</h2>
+    </div>
+    <div class="timeline">
+      <div class="row">
+        <p class="when">Sep 2022 to May 2026</p>
+        <div>
+          <p class="what">BSc Data Science &amp; Business Analytics</p>
+          <p style="color:var(--muted); margin-top:3px">University of London / London School of Economics</p>
+        </div>
+      </div>
+      <div class="row">
+        <p class="when">2022</p>
+        <div>
+          <p class="what">International Baccalaureate (IB)</p>
+          <p style="color:var(--muted); margin-top:3px">Arabian Pearl Gulf School</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="gallery" id="gallery">
+  <div class="wrap">
+    <h2>Gallery</h2>
+    <div class="show">
+      <div class="slides" id="slides" aria-roledescription="carousel" aria-label="Photos">
+        <figure><img src="photos/1.jpg" alt="Zahra with a class of students after a session" loading="lazy" width="1500" height="1000"></figure>
+        <figure><img src="photos/2.jpg" alt="Zahra presenting in front of a screen" loading="lazy" width="1500" height="1000"></figure>
+        <figure><img src="photos/3.jpg" alt="Zahra with a class of young students" loading="lazy" width="1500" height="1000"></figure>
+        <figure><img src="photos/4.jpg" alt="Zahra with a class of students in front of a projector" loading="lazy" width="1500" height="1000"></figure>
+      </div>
+      <button class="ctl prev" type="button" aria-label="Previous photo" data-dir="-1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+      <button class="ctl next" type="button" aria-label="Next photo" data-dir="1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+    </div>
+    <div class="dots" id="dots" aria-label="Choose photo"></div>
+  </div>
+</section>
+
+<section class="block alt" id="beyond">
+  <div class="wrap two">
+    <div>
+      <h2>Beyond work</h2>
+    </div>
+    <div style="display:flex; flex-direction:column; gap:16px">
+      <p>I’m a runner, I practise Arabic calligraphy, and I hike.</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="contact" id="contact">
+  <div class="wrap">
+    <div>
+      <h2>Get in touch</h2>
+      <p>Nationality: Bahraini. Based in Bahrain.</p>
+    </div>
+    <div class="links">
+      <a href="mailto:z.redha@outlook.com">z.redha@outlook.com</a>
+      <a href="https://www.linkedin.com/in/zahra-redha">linkedin.com/in/zahra-redha</a>
+      <a href="Zahra-Redha-CV.pdf" download>Download CV (PDF)</a>
+    </div>
+  </div>
+  <div class="wrap foot">
+    <span>Zahra Redha</span>
+    <span>2026</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var track=document.getElementById('slides');
+  var slides=track.querySelectorAll('figure');
+  var dots=document.getElementById('dots');
+  var n=slides.length, current=0;
+  for(var i=0;i<n;i++){
+    var b=document.createElement('button'); b.type='button';
+    b.setAttribute('aria-label','Photo '+(i+1)+' of '+n);
+    b.dataset.i=i; dots.appendChild(b);
+  }
+  function go(i){
+    current=(i+n)%n;
+    track.scrollTo({left: slides[current].offsetLeft - track.offsetLeft, behavior:'smooth'});
+  }
+  function mark(){
+    var w=track.clientWidth; var i=Math.round(track.scrollLeft/(w+16)); if(i<0)i=0; if(i>n-1)i=n-1;
+    current=i;
+    dots.querySelectorAll('button').forEach(function(d,k){ d.setAttribute('aria-current', k===i ? 'true' : 'false'); });
+  }
+  dots.addEventListener('click',function(e){ var t=e.target.closest('button'); if(t) go(+t.dataset.i); });
+  document.querySelectorAll('.ctl').forEach(function(c){ c.addEventListener('click',function(){ go(current + (+c.dataset.dir)); }); });
+  var tick; track.addEventListener('scroll',function(){ clearTimeout(tick); tick=setTimeout(mark,80); }, {passive:true});
+  mark();
+})();
+</script>
+</body>
+</html>
